@@ -7,6 +7,37 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h3>Menghitung luas keliling lingkaran</h3>
+
+    <label for="jarijarilingkaran">Masukkan nilai jari jari lingkaran :</label>
+        <input type="text" id="jarijarilingkaran" name="jarijarilingkaran"><br>
+
+        <button onclick="hitung()">Hitung</button>
+
+        <p>Luas Lingkaran</p>
+        <td><input type="text" id="luaslingkaran" disabled></td>
+        <p>keliling Lingkaran</p>
+        <td><input type="text" id="kelilinglingkaran" disabled></td>
+
+      
+
+        <script>
+const phi = 3.14;
+var luas;
+var keliling;
+var r;
+var d;
+function hitung() {
+	r = parseFloat(document.getElementById("jarijarilingkaran").value);
+	luas = phi * Math.pow(r,2);
+	d = 2 * r;
+	keliling = phi * d;
+	document.getElementById('luaslingkaran').value = luas;
+	document.getElementById('kelilinglingkaran').value = keliling;
+}
+
+            
+ 
+        </script>
 </body>
 </html>
